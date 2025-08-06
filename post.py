@@ -1,0 +1,13 @@
+import requests
+import json
+
+url = "http://127.0.0.1:5000/items"
+
+data = {
+    "name":"Headphones",
+    "price":23000
+}
+
+response = requests.post(url, json=data)
+print(response.status_code)
+print(response.json)
